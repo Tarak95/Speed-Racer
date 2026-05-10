@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>🏎️ Speed Racer X</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- BACKGROUND STARS -->
+  <div class="bg-stars" id="bgStars"></div>
+
+  <!-- MAIN WRAPPER -->
+  <div class="game-wrapper">
+
+    <!-- HUD TOP -->
+    <div class="hud">
+      <div class="hud-block">
+        <span class="hud-label">SCORE</span>
+        <span class="hud-value" id="score">0</span>
+      </div>
+      <div class="hud-block center">
+        <span class="hud-label">SPEED</span>
+        <div class="speed-bar-wrap">
+          <div class="speed-bar" id="speedBar"></div>
+        </div>
+        <span class="hud-value" id="speedVal">0</span><span class="hud-unit">km/h</span>
+      </div>
+      <div class="hud-block right">
+        <span class="hud-label">LIVES</span>
+        <div class="lives" id="lives">❤️❤️❤️</div>
+      </div>
+    </div>
+
+    <!-- GAME CANVAS -->
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- OVERLAY: START -->
+    <div class="overlay" id="startScreen">
+      <div class="overlay-inner">
+        <div class="logo-text">SPEED<br/><span>RACER X</span></div>
+        <p class="subtitle">এড়িয়ে চলো · টিকে থাকো · জিতে নাও</p>
+        <button class="btn-glow" id="startBtn">▶ START GAME</button>
+        <div class="controls-hint">
+          <div class="ctrl-item">⬅ ➡ <span>Move</span></div>
+          <div class="ctrl-item">📱 <span>Swipe / Tap Sides</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OVERLAY: GAME OVER -->
+    <div class="overlay hidden" id="gameOverScreen">
+      <div class="overlay-inner">
+        <div class="go-title">GAME OVER</div>
+        <div class="go-score">Score: <span id="finalScore">0</span></div>
+        <div class="go-best">Best: <span id="bestScore">0</span></div>
+        <button class="btn-glow" id="restartBtn">🔄 PLAY AGAIN</button>
+      </div>
+    </div>
+
+    <!-- MOBILE CONTROLS -->
+    <div class="mobile-controls">
+      <button class="ctrl-btn" id="leftBtn">◀</button>
+      <button class="ctrl-btn" id="rightBtn">▶</button>
+    </div>
+
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
